@@ -10,11 +10,11 @@ angular.module('RPS.join', ['ngRoute'])
 }])
 
 .controller('JoinCtrl', ['$scope', '$http', '$location', 'dataService', function($scope, $http, $location, dataService) {
-  $scope.min_users = 2;
+  $scope.min_players = 2;
 
-  $scope.join = function (username, min_users) {
+  $scope.join = function (username, min_players) {
     $scope.loading = true;
-    $http.post('/joingame', {id: username, min_users: min_users}, {timeout: 1000000})
+    $http.post('/joingame', {id: username, min_players: min_players}, {timeout: 1000000})
     .success( function (data) {
       if (data.error) {
         alert(data.error)

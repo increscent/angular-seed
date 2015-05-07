@@ -16,7 +16,7 @@
   <h4>Players</h4>
   <ul>
     <li ng-repeat="player in players">
-      {{ player }}
+      <span ng-class="{bold: username === player}">{{ player }}</span>
     </li>
   </ul>
 </div>
@@ -30,7 +30,7 @@
       <span ng-class="{bold: username === player}">{{ player }} chose {{ moves[player] }}</span>
     </li>
     <li ng-repeat="loser in losers">
-      <span class="strikethrough" ng-class="{bold: username === player}">{{ loser }} chose {{ moves[loser] }}</span>
+      <span ng-class="{bold: username === loser, strikethrough: true}">{{ loser }} chose {{ moves[loser] }}</span>
     </li>
   </ul>
 </div>
