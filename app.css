@@ -1,4 +1,13 @@
 /* app css stylesheet */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+div {
+  box-sizing: border-box;
+}
 
 .menu {
   list-style: none;
@@ -27,4 +36,25 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+.container {
+  margin-top: 4rem;
+}
+
+td {
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type="number"] {
+  width: 3rem;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: bold;
 }
