@@ -1,14 +1,11 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('RPS', [
+angular.module('myApp', [
   'ngRoute',
-  'RPS.join',
-  'RPS.play',
-  'RPS.lose',
-  'RPS.win',
-  'RPS.dataService'
+  'myApp.view1',
+  'myApp.view2'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/join'});
+  $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
